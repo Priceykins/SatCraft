@@ -10,3 +10,26 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Forge/Example files
+.gradle
+bin
+build
+config
+crash-reports
+eclipse
+gradle
+logs
+mods
+com
+devoxx4kids
+build.gradle
+*-fml.txt
+gradle*
+options.txt
+saves
+mymods
+mcmod.info
+usernamecache.json
+MinecraftForge*
+README.txt

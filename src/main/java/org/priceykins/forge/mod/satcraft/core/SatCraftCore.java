@@ -3,6 +3,8 @@ package org.priceykins.forge.mod.satcraft.core;
 
 
 import org.priceykins.forge.mod.satcraft.blocks.*;
+import org.priceykins.forge.mod.satcraft.world.gen.OverworldGenerator;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -19,26 +21,30 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "2";
+	protected static final String MOD_BUILD_VERSION = "3";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 	    //Initialising the mod
 
 		//Init the blocks
-		this.initBlocks();
+		SatCraftBlocks.initBlocks();
+		this.addBlocksToWorld();
 	}
 	
-	public void initBlocks(){
+	public void addBlocksToWorld(){
 		
 		//init the blocks
 		//Current block types: blockTitaniumOre, blockAluminiumOre
-		BlockTitaniumOre titaniumOre = new BlockTitaniumOre();
-		this.registerBlock(titaniumOre, titaniumOre.getName());
-		this.registerBlockModelAndTexture(titaniumOre.getName());
-		BlockAluminiumOre aluminiumOre = new BlockAluminiumOre();
-		this.registerBlock(aluminiumOre, aluminiumOre.getName());
-		this.registerBlockModelAndTexture(aluminiumOre.getName());
+		
+		this.registerBlock(SatCraftBlocks.titaniumOre, SatCraftBlocks.titaniumOre.getName());
+		this.registerBlockModelAndTexture(SatCraftBlocks.titaniumOre.getName());
+		//GameRegistry.registerWorldGenerator(new OverworldGenerator(SatCraftBlocks.titaniumOre), 1);
+		this.registerBlock(SatCraftBlocks.aluminiumOre, SatCraftBlocks.aluminiumOre.getName());
+		this.registerBlockModelAndTexture(SatCraftBlocks.aluminiumOre.getName());
+		//GameRegistry.registerWorldGenerator(new OverworldGenerator(SatCraftBlocks.aluminiumOre), 2);
+		GameRegistry.registerWorldGenerator(new OverworldGenerator(), 1);
+	
 	}
 	
 	//Method to register the mods blocks
