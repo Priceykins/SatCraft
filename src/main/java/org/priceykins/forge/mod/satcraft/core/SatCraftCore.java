@@ -30,19 +30,37 @@ public class SatCraftCore {
 
 		//Init the blocks
 		SatCraftBlocks.initBlocks();
+		//init materials and items
+		SatCraftItems.initMaterials();
 		SatCraftItems.initItems();
+		//add blocks and items to world
 		this.addBlocksToWorld();
 		this.addItemsToWorld();
+		//add recipies
 		SatCraftRecipieManager.loadRecipies();
 	}
 	
 	public void addItemsToWorld(){
 		
 		//Add items to the world
+		
+		//Blocks
 		GameRegistry.registerItem(SatCraftItems.titaniumIngot, SatCraftItems.titaniumIngot.getName());
 		this.registerModelAndTexture(SatCraftItems.titaniumIngot.getName());
 		GameRegistry.registerItem(SatCraftItems.aluminiumIngot, SatCraftItems.aluminiumIngot.getName());
 		this.registerModelAndTexture(SatCraftItems.aluminiumIngot.getName());
+		
+		//Items
+		GameRegistry.registerItem(SatCraftItems.titaniumPickaxe, SatCraftItems.titaniumPickaxe.getName());
+		this.registerModelAndTexture(SatCraftItems.titaniumPickaxe.getName());
+		GameRegistry.registerItem(SatCraftItems.titaniumAxe, SatCraftItems.titaniumAxe.getName());
+		this.registerModelAndTexture(SatCraftItems.titaniumAxe.getName());
+		GameRegistry.registerItem(SatCraftItems.titaniumHoe, SatCraftItems.titaniumHoe.getName());
+		this.registerModelAndTexture(SatCraftItems.titaniumHoe.getName());
+		GameRegistry.registerItem(SatCraftItems.titaniumSword, SatCraftItems.titaniumSword.getName());
+		this.registerModelAndTexture(SatCraftItems.titaniumSword.getName());
+		GameRegistry.registerItem(SatCraftItems.titaniumShovel, SatCraftItems.titaniumShovel.getName());
+		this.registerModelAndTexture(SatCraftItems.titaniumShovel.getName());
 	}
 	
 	public void addBlocksToWorld(){
