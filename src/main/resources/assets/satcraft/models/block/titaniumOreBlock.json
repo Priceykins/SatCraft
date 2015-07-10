@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+       "down": "satcraft:blocks/titaniumOreBlock",
+         "up": "satcraft:blocks/titaniumOreBlock",
+      "north": "satcraft:blocks/titaniumOreBlock",
+      "south": "satcraft:blocks/titaniumOreBlock",
+       "west": "satcraft:blocks/titaniumOreBlock",
+       "east": "satcraft:blocks/titaniumOreBlock",
+   "particle": "satcraft:blocks/titaniumOreBlock"
+  }
+}
