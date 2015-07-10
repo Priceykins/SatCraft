@@ -22,7 +22,7 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "6";
+	protected static final String MOD_BUILD_VERSION = "7";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -33,6 +33,7 @@ public class SatCraftCore {
 		SatCraftItems.initItems();
 		this.addBlocksToWorld();
 		this.addItemsToWorld();
+		SatCraftRecipieManager.loadRecipies();
 	}
 	
 	public void addItemsToWorld(){
