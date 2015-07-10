@@ -21,7 +21,7 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "3";
+	protected static final String MOD_BUILD_VERSION = "5";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -39,10 +39,8 @@ public class SatCraftCore {
 		
 		this.registerBlock(SatCraftBlocks.titaniumOre, SatCraftBlocks.titaniumOre.getName());
 		this.registerBlockModelAndTexture(SatCraftBlocks.titaniumOre.getName());
-		//GameRegistry.registerWorldGenerator(new OverworldGenerator(SatCraftBlocks.titaniumOre), 1);
 		this.registerBlock(SatCraftBlocks.aluminiumOre, SatCraftBlocks.aluminiumOre.getName());
 		this.registerBlockModelAndTexture(SatCraftBlocks.aluminiumOre.getName());
-		//GameRegistry.registerWorldGenerator(new OverworldGenerator(SatCraftBlocks.aluminiumOre), 2);
 		GameRegistry.registerWorldGenerator(new OverworldGenerator(), 1);
 	
 	}
