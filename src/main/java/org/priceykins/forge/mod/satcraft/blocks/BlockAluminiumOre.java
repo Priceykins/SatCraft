@@ -10,8 +10,8 @@ public class BlockAluminiumOre extends BlockBasic {
 		super();
 		this.setUnlocalizedName(NAME);
 		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setResistance(5.0F);
-		this.setHardness(10.0F);
+		this.setResistance(10.0F);
+		this.setHardness(3.0F);
 	}
 	
 	public String getName(){
