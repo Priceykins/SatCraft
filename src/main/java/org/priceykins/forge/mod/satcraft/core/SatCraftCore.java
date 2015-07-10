@@ -3,6 +3,7 @@ package org.priceykins.forge.mod.satcraft.core;
 
 
 import org.priceykins.forge.mod.satcraft.blocks.*;
+import org.priceykins.forge.mod.satcraft.items.SatCraftItems;
 import org.priceykins.forge.mod.satcraft.world.gen.OverworldGenerator;
 
 import net.minecraft.block.Block;
@@ -21,7 +22,7 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "5";
+	protected static final String MOD_BUILD_VERSION = "6";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -29,7 +30,18 @@ public class SatCraftCore {
 
 		//Init the blocks
 		SatCraftBlocks.initBlocks();
+		SatCraftItems.initItems();
 		this.addBlocksToWorld();
+		this.addItemsToWorld();
+	}
+	
+	public void addItemsToWorld(){
+		
+		//Add items to the world
+		GameRegistry.registerItem(SatCraftItems.titaniumIngot, SatCraftItems.titaniumIngot.getName());
+		this.registerModelAndTexture(SatCraftItems.titaniumIngot.getName());
+		GameRegistry.registerItem(SatCraftItems.aluminiumIngot, SatCraftItems.aluminiumIngot.getName());
+		this.registerModelAndTexture(SatCraftItems.aluminiumIngot.getName());
 	}
 	
 	public void addBlocksToWorld(){
@@ -38,9 +50,9 @@ public class SatCraftCore {
 		//Current block types: blockTitaniumOre, blockAluminiumOre
 		
 		this.registerBlock(SatCraftBlocks.titaniumOre, SatCraftBlocks.titaniumOre.getName());
-		this.registerBlockModelAndTexture(SatCraftBlocks.titaniumOre.getName());
+		this.registerModelAndTexture(SatCraftBlocks.titaniumOre.getName());
 		this.registerBlock(SatCraftBlocks.aluminiumOre, SatCraftBlocks.aluminiumOre.getName());
-		this.registerBlockModelAndTexture(SatCraftBlocks.aluminiumOre.getName());
+		this.registerModelAndTexture(SatCraftBlocks.aluminiumOre.getName());
 		GameRegistry.registerWorldGenerator(new OverworldGenerator(), 1);
 	
 	}
@@ -53,7 +65,7 @@ public class SatCraftCore {
 	
 	//Method to register the blocks textures and models
 	//unloc_name is the unlocalised name of the block being registered
-	public void registerBlockModelAndTexture(String name){
+	public void registerModelAndTexture(String name){
 		
 		Item item = GameRegistry.findItem(MOD_NAME.toLowerCase(), name);
 		ModelResourceLocation model = new ModelResourceLocation(MOD_NAME.toLowerCase() + ":" + name, "inventory");
