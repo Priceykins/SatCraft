@@ -2,7 +2,6 @@ package org.priceykins.forge.mod.satcraft.world.gen;
 
 import java.util.Random;
 
-import org.priceykins.forge.mod.satcraft.blocks.BlockBasic;
 import org.priceykins.forge.mod.satcraft.blocks.SatCraftBlocks;
 
 import net.minecraft.block.Block;
@@ -41,6 +40,7 @@ public class OverworldGenerator implements IWorldGenerator {
 
 		addOreSpawn(SatCraftBlocks.titaniumOre, world, random, chunkX, chunkZ, 16, 16, 4 + random.nextInt(3), 3, 10, 45);
 		addOreSpawn(SatCraftBlocks.aluminiumOre, world, random, chunkX, chunkZ, 16, 16, 7 + random.nextInt(7), 6, 25, 175);
+		addOreSpawn(SatCraftBlocks.silicaOre, world, random, chunkX, chunkZ, 16, 16, 7 + random.nextInt(10), 4, 45, 175);
 
 	}
 

@@ -16,6 +16,9 @@ public class SatCraftItems {
 	public static ItemTitaniumSword titaniumSword;
 	public static ItemTitaniumShovel titaniumShovel;
 	
+	//Items - materials
+	public static ItemSilicaCrystal silicaCrystal;
+	
 	//materials
 	public static ToolMaterial titanium;
 	public static ToolMaterial aluminium;
@@ -32,6 +35,9 @@ public class SatCraftItems {
 		titaniumHoe = new ItemTitaniumHoe(titanium);
 		titaniumSword = new ItemTitaniumSword(titanium);
 		titaniumShovel = new ItemTitaniumShovel(titanium);
+		
+		//Items - Materials
+		silicaCrystal = new ItemSilicaCrystal();
 	}
 	
 	public static void initMaterials(){

@@ -22,7 +22,7 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "7";
+	protected static final String MOD_BUILD_VERSION = "10";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -44,13 +44,15 @@ public class SatCraftCore {
 		
 		//Add items to the world
 		
-		//Blocks
+		//Items - Materials
 		GameRegistry.registerItem(SatCraftItems.titaniumIngot, SatCraftItems.titaniumIngot.getName());
 		this.registerModelAndTexture(SatCraftItems.titaniumIngot.getName());
 		GameRegistry.registerItem(SatCraftItems.aluminiumIngot, SatCraftItems.aluminiumIngot.getName());
-		this.registerModelAndTexture(SatCraftItems.aluminiumIngot.getName());
+		this.registerModelAndTexture(SatCraftItems.aluminiumIngot.getName());	
+		GameRegistry.registerItem(SatCraftItems.silicaCrystal, SatCraftItems.silicaCrystal.getName());
+		this.registerModelAndTexture(SatCraftItems.silicaCrystal.getName());
 		
-		//Items
+		//Items - Tools
 		GameRegistry.registerItem(SatCraftItems.titaniumPickaxe, SatCraftItems.titaniumPickaxe.getName());
 		this.registerModelAndTexture(SatCraftItems.titaniumPickaxe.getName());
 		GameRegistry.registerItem(SatCraftItems.titaniumAxe, SatCraftItems.titaniumAxe.getName());
@@ -72,6 +74,8 @@ public class SatCraftCore {
 		this.registerModelAndTexture(SatCraftBlocks.titaniumOre.getName());
 		this.registerBlock(SatCraftBlocks.aluminiumOre, SatCraftBlocks.aluminiumOre.getName());
 		this.registerModelAndTexture(SatCraftBlocks.aluminiumOre.getName());
+		this.registerBlock(SatCraftBlocks.silicaOre, SatCraftBlocks.silicaOre.getName());
+		this.registerModelAndTexture(SatCraftBlocks.silicaOre.getName());
 		GameRegistry.registerWorldGenerator(new OverworldGenerator(), 1);
 	
 	}

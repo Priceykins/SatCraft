@@ -1,5 +1,6 @@
-title.titaniumOreBlock.name=Titanium Ore
-title.aluminiumOreBlock.name=Aluminium Ore
+tile.titaniumOreBlock.name=Titanium Ore
+tile.aluminiumOreBlock.name=Aluminium Ore
+tile.silicaOreBlock.name=Silica Ore
 item.titaniumIngot.name=Titanium Ingot
 item.aluminiumIngot.name=Aluminium Ingot
 item.titaniumPickaxe.name=Titanium Pickaxe
@@ -7,3 +8,4 @@ item.titaniumSword.name=Titanium Sword
 item.titaniumAxe.name=Titanium Axe
 item.titaniumHoe.name=Titanium Hoe
 item.titaniumShovel.name=Titanium Shovel
+item.silicaCrystal.name=Silica Crystal
