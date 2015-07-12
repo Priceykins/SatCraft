@@ -65,6 +65,12 @@ public class SatCraftCore {
 		this.registerModelAndTexture(SatCraftItems.titaniumSword.getName());
 		GameRegistry.registerItem(SatCraftItems.titaniumShovel, SatCraftItems.titaniumShovel.getName());
 		this.registerModelAndTexture(SatCraftItems.titaniumShovel.getName());
+		
+		//Items - Sat Components
+		GameRegistry.registerItem(SatCraftItems.titaniumStrut, SatCraftItems.titaniumStrut.getName());
+		this.registerModelAndTexture(SatCraftItems.titaniumStrut.getName());
+		GameRegistry.registerItem(SatCraftItems.aluminiumStrut, SatCraftItems.aluminiumStrut.getName());
+		this.registerModelAndTexture(SatCraftItems.aluminiumStrut.getName());
 	}
 	
 	public void addBlocksToWorld(){
