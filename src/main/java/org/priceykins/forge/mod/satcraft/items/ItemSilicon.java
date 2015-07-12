@@ -1,6 +1,7 @@
 package org.priceykins.forge.mod.satcraft.items;
 
-import net.minecraft.creativetab.CreativeTabs;
+import org.priceykins.forge.mod.satcraft.core.SatCraftConstants;
+
 import net.minecraft.item.Item;
 
 public class ItemSilicon extends Item {
@@ -11,7 +12,7 @@ public class ItemSilicon extends Item {
 	public ItemSilicon(){
 		super();
 		this.setUnlocalizedName(NAME);
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(SatCraftConstants.tabSatCraft);
 	}
 	
 	public String getName(){

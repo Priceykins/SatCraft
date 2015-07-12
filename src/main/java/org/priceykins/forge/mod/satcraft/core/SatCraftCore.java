@@ -16,14 +16,11 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = SatCraftCore.MOD_NAME, version = SatCraftCore.MOD_MAJ_VERSION + "." + SatCraftCore.MOD_MIN_VERSION + "." + SatCraftCore.MOD_BUILD_VERSION + ".")
+@Mod(modid = SatCraftConstants.MOD_NAME, version = SatCraftConstants.MOD_MAJ_VERSION + "." + SatCraftConstants.MOD_MIN_VERSION + "." + SatCraftConstants.MOD_BUILD_VERSION + ".")
 public class SatCraftCore {
 
 	//Mod name and version related variables
-	protected static final String MOD_NAME = "SatCraft";
-	protected static final String MOD_MAJ_VERSION = "0";
-	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "15";
+
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -38,6 +35,8 @@ public class SatCraftCore {
 		//add blocks and items to world
 		this.addBlocksToWorld();
 		this.addItemsToWorld();
+		//creative tab
+		
 		//add recipies
 		SatCraftRecipieManager.loadRecipies();
 	}
@@ -112,12 +111,10 @@ public class SatCraftCore {
 	//unloc_name is the unlocalised name of the block being registered
 	public void registerModelAndTexture(String name){
 		
-		Item item = GameRegistry.findItem(MOD_NAME.toLowerCase(), name);
-		ModelResourceLocation model = new ModelResourceLocation(MOD_NAME.toLowerCase() + ":" + name, "inventory");
+		Item item = GameRegistry.findItem(SatCraftConstants.MOD_NAME.toLowerCase(), name);
+		ModelResourceLocation model = new ModelResourceLocation(SatCraftConstants.MOD_NAME.toLowerCase() + ":" + name, "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, model);
 	}
-	
-
 }
 
 

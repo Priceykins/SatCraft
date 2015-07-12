@@ -2,7 +2,8 @@ package org.priceykins.forge.mod.satcraft.sats;
 
 import java.util.HashMap;
 
-import net.minecraft.creativetab.CreativeTabs;
+import org.priceykins.forge.mod.satcraft.core.SatCraftConstants;
+
 import net.minecraft.item.Item;
 
 public class SatBasic extends Item {
@@ -14,7 +15,7 @@ public class SatBasic extends Item {
 	public SatBasic(){
 		super();
 		this.setUnlocalizedName("SatBasic");
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(SatCraftConstants.tabSatCraft);
 		components = new HashMap<Integer, Item>();
 	}
 	
