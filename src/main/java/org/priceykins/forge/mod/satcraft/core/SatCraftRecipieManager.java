@@ -14,6 +14,7 @@ public class SatCraftRecipieManager {
 		
 		SatCraftRecipieManager.loadSmeltingRecipies();
 		SatCraftRecipieManager.loadToolRecipies();
+		SatCraftRecipieManager.loadSatCompRecipies();
 	}
 	
 	public static void loadSmeltingRecipies(){
@@ -32,4 +33,7 @@ public class SatCraftRecipieManager {
 		CraftingManager.getInstance().addRecipe(new ItemStack(SatCraftItems.titaniumHoe, 1), "tt ", " s ", " s ", Character.valueOf('s'), Items.stick, Character.valueOf('t'), SatCraftItems.titaniumIngot);
 	}
 
+	public static void loadSatCompRecipies(){
+		CraftingManager.getInstance().addRecipe(new ItemStack(SatCraftItems.aluminiumCubeSatFrame, 1), "aaa", "a a", "aaa", Character.valueOf('a'), SatCraftItems.aluminiumStrut);
+	}
 }

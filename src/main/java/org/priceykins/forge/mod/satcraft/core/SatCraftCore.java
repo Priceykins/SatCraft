@@ -22,7 +22,7 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "11";
+	protected static final String MOD_BUILD_VERSION = "13";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -71,6 +71,8 @@ public class SatCraftCore {
 		this.registerModelAndTexture(SatCraftItems.titaniumStrut.getName());
 		GameRegistry.registerItem(SatCraftItems.aluminiumStrut, SatCraftItems.aluminiumStrut.getName());
 		this.registerModelAndTexture(SatCraftItems.aluminiumStrut.getName());
+		GameRegistry.registerItem(SatCraftItems.aluminiumCubeSatFrame, SatCraftItems.aluminiumCubeSatFrame.getName());
+		this.registerModelAndTexture(SatCraftItems.aluminiumCubeSatFrame.getName());
 	}
 	
 	public void addBlocksToWorld(){

@@ -23,6 +23,7 @@ public class SatCraftItems {
 	//Items - sat components
 	public static ItemAluminiumStrut aluminiumStrut;
 	public static ItemTitaniumStrut titaniumStrut;
+	public static ItemAluminiumCubeSatFrame aluminiumCubeSatFrame;
 	
 	//materials
 	public static ToolMaterial titanium;
@@ -44,6 +45,7 @@ public class SatCraftItems {
 		//Items - sat components
 		aluminiumStrut = new ItemAluminiumStrut();
 		titaniumStrut = new ItemTitaniumStrut();
+		aluminiumCubeSatFrame = new ItemAluminiumCubeSatFrame();
 		
 		//Items - Materials
 		silicaCrystal = new ItemSilicaCrystal();
