@@ -20,6 +20,7 @@ public class SatCraftRecipieManager {
 		
 		FurnaceRecipes.instance().addSmeltingRecipeForBlock(SatCraftBlocks.titaniumOre, new ItemStack(SatCraftItems.titaniumIngot, 1), 1.0F);
 		FurnaceRecipes.instance().addSmeltingRecipeForBlock(SatCraftBlocks.aluminiumOre, new ItemStack(SatCraftItems.aluminiumIngot, 1), 1.0F);
+		FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(SatCraftItems.silicaCrystal, 1), new ItemStack(SatCraftItems.silicon, 1), 1.0F);
 	}
 	
 	public static void loadToolRecipies(){

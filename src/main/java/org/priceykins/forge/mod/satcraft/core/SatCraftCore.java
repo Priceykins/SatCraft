@@ -22,7 +22,7 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "10";
+	protected static final String MOD_BUILD_VERSION = "11";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -51,6 +51,8 @@ public class SatCraftCore {
 		this.registerModelAndTexture(SatCraftItems.aluminiumIngot.getName());	
 		GameRegistry.registerItem(SatCraftItems.silicaCrystal, SatCraftItems.silicaCrystal.getName());
 		this.registerModelAndTexture(SatCraftItems.silicaCrystal.getName());
+		GameRegistry.registerItem(SatCraftItems.silicon, SatCraftItems.silicon.getName());
+		this.registerModelAndTexture(SatCraftItems.silicon.getName());
 		
 		//Items - Tools
 		GameRegistry.registerItem(SatCraftItems.titaniumPickaxe, SatCraftItems.titaniumPickaxe.getName());
