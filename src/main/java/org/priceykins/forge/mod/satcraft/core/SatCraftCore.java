@@ -73,6 +73,8 @@ public class SatCraftCore {
 		this.registerModelAndTexture(SatCraftItems.aluminiumStrut.getName());
 		GameRegistry.registerItem(SatCraftItems.aluminiumCubeSatFrame, SatCraftItems.aluminiumCubeSatFrame.getName());
 		this.registerModelAndTexture(SatCraftItems.aluminiumCubeSatFrame.getName());
+		GameRegistry.registerItem(SatCraftItems.basicCircuitBoard, SatCraftItems.basicCircuitBoard.getName());
+		this.registerModelAndTexture(SatCraftItems.basicCircuitBoard.getName());
 	}
 	
 	public void addBlocksToWorld(){

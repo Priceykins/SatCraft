@@ -35,5 +35,6 @@ public class SatCraftRecipieManager {
 
 	public static void loadSatCompRecipies(){
 		CraftingManager.getInstance().addRecipe(new ItemStack(SatCraftItems.aluminiumCubeSatFrame, 1), "aaa", "a a", "aaa", Character.valueOf('a'), SatCraftItems.aluminiumStrut);
+		CraftingManager.getInstance().addRecipe(new ItemStack(SatCraftItems.basicCircuitBoard, 1), "srs", "gsg", "srs", Character.valueOf('s'), SatCraftItems.silicon, Character.valueOf('r'), Items.redstone, Character.valueOf('g'), Items.gold_ingot);
 	}
 }
