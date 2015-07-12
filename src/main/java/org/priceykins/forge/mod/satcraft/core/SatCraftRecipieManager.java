@@ -22,6 +22,7 @@ public class SatCraftRecipieManager {
 		FurnaceRecipes.instance().addSmeltingRecipeForBlock(SatCraftBlocks.titaniumOre, new ItemStack(SatCraftItems.titaniumIngot, 1), 1.0F);
 		FurnaceRecipes.instance().addSmeltingRecipeForBlock(SatCraftBlocks.aluminiumOre, new ItemStack(SatCraftItems.aluminiumIngot, 1), 1.0F);
 		FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(SatCraftItems.silicaCrystal, 1), new ItemStack(SatCraftItems.silicon, 1), 1.0F);
+		FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(SatCraftItems.clayTile, 1), new ItemStack(SatCraftItems.ceramicPlate, 1), 1.0F);
 	}
 	
 	public static void loadToolRecipies(){
@@ -36,5 +37,6 @@ public class SatCraftRecipieManager {
 	public static void loadSatCompRecipies(){
 		CraftingManager.getInstance().addRecipe(new ItemStack(SatCraftItems.aluminiumCubeSatFrame, 1), "aaa", "a a", "aaa", Character.valueOf('a'), SatCraftItems.aluminiumStrut);
 		CraftingManager.getInstance().addRecipe(new ItemStack(SatCraftItems.basicCircuitBoard, 1), "srs", "gsg", "srs", Character.valueOf('s'), SatCraftItems.silicon, Character.valueOf('r'), Items.redstone, Character.valueOf('g'), Items.gold_ingot);
+		CraftingManager.getInstance().addRecipe(new ItemStack(SatCraftItems.clayTile, 3), "ccc", "ccc", "ccc", Character.valueOf('c'), Items.clay_ball);
 	}
 }

@@ -25,6 +25,8 @@ public class SatCraftItems {
 	public static ItemTitaniumStrut titaniumStrut;
 	public static ItemAluminiumCubeSatFrame aluminiumCubeSatFrame;
 	public static ItemBasicCircuitBoard basicCircuitBoard;
+	public static ItemClayTile clayTile;
+	public static ItemCeramicPlate ceramicPlate;
 	
 	//materials
 	public static ToolMaterial titanium;
@@ -48,6 +50,8 @@ public class SatCraftItems {
 		titaniumStrut = new ItemTitaniumStrut();
 		aluminiumCubeSatFrame = new ItemAluminiumCubeSatFrame();
 		basicCircuitBoard = new ItemBasicCircuitBoard();
+		clayTile = new ItemClayTile();
+		ceramicPlate = new ItemCeramicPlate();
 		
 		//Items - Materials
 		silicaCrystal = new ItemSilicaCrystal();

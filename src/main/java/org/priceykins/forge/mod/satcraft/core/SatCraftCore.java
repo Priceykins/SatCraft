@@ -4,6 +4,7 @@ package org.priceykins.forge.mod.satcraft.core;
 
 import org.priceykins.forge.mod.satcraft.blocks.*;
 import org.priceykins.forge.mod.satcraft.items.SatCraftItems;
+import org.priceykins.forge.mod.satcraft.sats.SatCraftSats;
 import org.priceykins.forge.mod.satcraft.world.gen.OverworldGenerator;
 
 import net.minecraft.block.Block;
@@ -22,7 +23,7 @@ public class SatCraftCore {
 	protected static final String MOD_NAME = "SatCraft";
 	protected static final String MOD_MAJ_VERSION = "0";
 	protected static final String MOD_MIN_VERSION = "1";
-	protected static final String MOD_BUILD_VERSION = "13";
+	protected static final String MOD_BUILD_VERSION = "15";
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -33,6 +34,7 @@ public class SatCraftCore {
 		//init materials and items
 		SatCraftItems.initMaterials();
 		SatCraftItems.initItems();
+		SatCraftSats.initSats();
 		//add blocks and items to world
 		this.addBlocksToWorld();
 		this.addItemsToWorld();
@@ -75,6 +77,14 @@ public class SatCraftCore {
 		this.registerModelAndTexture(SatCraftItems.aluminiumCubeSatFrame.getName());
 		GameRegistry.registerItem(SatCraftItems.basicCircuitBoard, SatCraftItems.basicCircuitBoard.getName());
 		this.registerModelAndTexture(SatCraftItems.basicCircuitBoard.getName());
+		GameRegistry.registerItem(SatCraftItems.clayTile, SatCraftItems.clayTile.getName());
+		this.registerModelAndTexture(SatCraftItems.clayTile.getName());
+		GameRegistry.registerItem(SatCraftItems.ceramicPlate, SatCraftItems.ceramicPlate.getName());
+		this.registerModelAndTexture(SatCraftItems.ceramicPlate.getName());
+		
+		//Items - Sats
+		GameRegistry.registerItem(SatCraftSats.basicCubeSat, SatCraftSats.basicCubeSat.getName());
+		this.registerModelAndTexture(SatCraftSats.basicCubeSat.getName());
 	}
 	
 	public void addBlocksToWorld(){
